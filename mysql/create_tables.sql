@@ -28,7 +28,7 @@ create table Cust_Info(C_ID int,Cust_Name varchar(30),PAN_No varchar(20),Gender 
 desc Cust_Info;
 
 
-create table Loan_Info(Loan_ID int,C_ID int,Loan_Type varchar(30),Loan_Tenure int,Loan_Amount int,Interest_Type varchar(10),Interest_Rate float(4,2),IssueDate varchar(10),Mortgage_Details varchar(50),Guarantor_Name varchar(50),Address varchar(50),ContactNo varchar(30),primary key Loan_ID,foreign key(C_ID) references Cust_Info(C_ID));
+create table Loan_Info(Loan_ID int,C_ID int,Loan_Type varchar(30),Loan_Tenure int,Loan_Amount int,Interest_Type varchar(10),Interest_Rate float(4,2),IssueDate varchar(10),Mortgage_Details varchar(50),Guarantor_Name varchar(50),Address varchar(50),ContactNo varchar(30),primary key(Loan_ID),foreign key(C_ID) references Cust_Info(C_ID));
 
 desc Loan_Info;
 
